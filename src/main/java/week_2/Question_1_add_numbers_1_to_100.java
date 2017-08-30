@@ -23,8 +23,14 @@ public class Question_1_add_numbers_1_to_100 {
 
         // TODO write your loop here, and replace this return statement with your result.
         // It should add up all the numbers between the from and to variables.
-        return 0;
+        int i = 0,sum = 0;
+        for(i = from; i <= to;i++) {
+            sum += i;
+        }
+        return sum;
+        }
+
 
     }
 
-}
+

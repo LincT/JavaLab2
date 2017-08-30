@@ -1,6 +1,7 @@
 package week_2;
 
 import java.util.Random;
+import static input.InputUtils.*;
 
 import static input.InputUtils.*;
 
@@ -34,6 +35,7 @@ public class Question_4_Random_Number_Guessing_Game {
         int guessesNeeded = new Question_4_Random_Number_Guessing_Game().play();
 
         // TODO print the number of guesses needed.
+        System.out.println("Guesses: " + guessesNeeded);
 
     }
 
@@ -45,17 +47,21 @@ public class Question_4_Random_Number_Guessing_Game {
 
         while (true) {
 
-            // TODO ask user for their guess
-            int guess = 0;   // Replace with your code
+            // ask user for their guess
+            int guess = intInput("What is your guess?");   // Replace with your code
 
-            // TODO increase guessesNeeded
+            // increase guessesNeeded
+            guessesNeeded++;
 
             String result = checkGuess(secret, guess);
 
-            // TODO print the result - too high, too low, or correct.
+            //  print the result - too high, too low, or correct.
+            System.out.println(result);
 
-            // TODO Check if result is correct. If so, end the loop.
-            break;  // TODO remove and replace with a test
+            // Check if result is correct. If so, end the loop.
+            if (result.equals(CORRECT))
+            {break;}
+
 
         }
 
@@ -67,15 +73,22 @@ public class Question_4_Random_Number_Guessing_Game {
         // TODO Return CORRECT if secret is the same as guess
         // TODO Return LOW if guess is too low
         // TODO return HIGH if guess is too high
-
-        return null;   //replace with your code
+        if (secret>guess){
+            return LOW;}
+        else if (secret<guess){
+            return HIGH;
+        }
+        else {
+            return CORRECT;
+        }
     }
 
     public int generateSecretNumber(int min, int max) {
         // TODO generate a random number between min and max.
         // Use the global Random rnd to generate the number
+        return ((rnd.nextInt(max)) + min);
 
-        return 0;  //replace with your code
+        //return 0;  //replace with your code
     }
 
 

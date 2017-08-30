@@ -31,8 +31,27 @@ public class Question_7_String_Contains_Chars {
 
     public boolean testContainsChars(String testString) {
 
-        // TODO check if testString contains all the punctuation characters being tested.
-        return false;
+        // check if testString contains all the punctuation characters being tested.
+        int i = 0;
+        boolean result = false;
+        while (i<punctuation.length()){
+            //System.out.println(punctuation.charAt(i));
+            //i++;
+            if(testString.contains(punctuation.substring(i,i+1))){
+                //System.out.println(punctuation.substring(i,i+1));
+                i++;
+                result=true;
+                //break;
+            }
+            else {
+                result = false;
+                break;
+            }
+
+        }
+        return result;
+        //return (testString.contains(punctuation));
+        //return false;
     }
 
 }

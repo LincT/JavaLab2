@@ -27,12 +27,18 @@ public class Question_2_add_5_numbers {
 
         // TODO Ask user for 5 integer numbers, one by one
         // Calculate total and average and save in the variables below.
-
+        // Write your code here...
         double total = 0;  // TODO Keep the total variable. Replace 0 with your result.
         double average = 0;  // TODO Keep the average variable. Replace 0 with your result.
 
-        // Write your code here...
+        int i = 0;
 
+        while (i<5){
+            double integer = doubleInput("Please enter a number.");
+            total += integer;
+            i++;
+        }
+        average = total/i;
 
 
 

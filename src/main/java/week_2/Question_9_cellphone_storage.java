@@ -6,7 +6,9 @@ package week_2;
 
  •	App A syncs and downloads data every hour, and downloads 0.5KB each time
  •	App B syncs and downloads daily, and downloads 2KB every time
- •	App C, when installed, is 1MB in size. This app syncs and downloads every 4 hours, and every time it syncs it downloads 1% of its current size. The new data it downloads count towards the app's size, so you'll need to keep track of the current size of the app.
+ •	App C, when installed, is 1MB in size. This app syncs and downloads every 4 hours, and every time it syncs it
+     downloads 1% of its current size. The new data it downloads count towards the app's size, so you'll need to
+     keep track of the current size of the app.
 
  With all apps installed, the phone has 5MB of free space.
  When the phone starts, each app syncs and downloads, and then repeats to their own schedule.
@@ -24,7 +26,8 @@ package week_2;
 public class Question_9_cellphone_storage {
 
     public static void main(String[] args) {
-        double hoursToFill = new Question_9_cellphone_storage().calculateTimeToFillPhone(5000, 0.5, 2, 1, 1000);
+        double hoursToFill = new Question_9_cellphone_storage().calculateTimeToFillPhone(5000,
+                0.5, 2, 1, 1000);
         System.out.println(hoursToFill);
     }
 

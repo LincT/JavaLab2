@@ -37,26 +37,36 @@ public class Question_6_Parcel_Delivery {
             double price = delivery.calculatePrice(weight);
             System.out.println(String.format("It will cost %.2f to send your %.2f pound parcel", price, weight));
         }
-
-
     }
 
     public boolean canShip(double weight) {
-        // TODO return false if parcel weighs 0 or less
-        // TODO return false if parcel weighs more than MAX_WEIGHT. Use the MAX_WEIGHT variable in your test
-
-        // TODO otherwise, the parcel is more than 0 and less than or equal to MAX_WEIGHT. Return true.
-
-        return false;  // Replace this with your code
+        // return false if parcel weighs 0 or less
+        // return false if parcel weighs more than MAX_WEIGHT. Use the MAX_WEIGHT variable in your test
+        // otherwise, the parcel is more than 0 and less than or equal to MAX_WEIGHT. Return true.
+        if (weight<=MAX_WEIGHT&&weight>0){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 
     public double calculatePrice(double weight) {
 
-        // TODO assume parcel is a valid weight. Figure out price to ship this parcel.
-
-        return 0;   //Replace this with your calculated price
-
+        // Figure out price to ship this parcel.
+        // Up to 10 pounds: $2.15 per pound
+        // 20 pounds: $1.55 per pound
+        // Up to 30 pounds: $1.15 per pound
+        if (weight<=10){
+            return 2.15 * weight;
+        }
+        else if (weight<=20){
+            return 1.55 * weight;
+        }
+        else{
+            return 1.15 * weight;
+        }
     }
 
 

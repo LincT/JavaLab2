@@ -3,7 +3,8 @@ package week_2;
 /**
  *
  *
- * Add a breakpoint to the start of one of your programs. Debug it, and then use the debugger to step through your program, and inspect the value of the variables.
+ * Add a breakpoint to the start of one of your programs. Debug it, and then use the debugger to step through your
+ * program, and inspect the value of the variables.
 
  How do you add a breakpoint? How can you remove a breakpoint?
 
@@ -45,9 +46,11 @@ public class Question_3_debugger {
     public boolean canAddAndRemoveBreakPoint() {
 
         // TODO how do you add a breakpoint?
+        // click in the margin near the line number to add a red dot.
         // TODO how do you remove a breakpoint?
+        // click again on the red dot to remove it.
 
-        return false;
+        return true;
 
     }
 
@@ -55,36 +58,41 @@ public class Question_3_debugger {
     public boolean canStartDebugger() {
 
         // TODO How do you start the debugger?
+        // Run>Debug
 
-        return false;
+        return true;
     }
 
 
     public boolean canAddManyBreakpoints() {
 
         // TODO     Can you add more than one breakpoint?
+        // yes, just click on each line one wishes to add a breakpoint.
 
-        return false;
+        return true;
     }
 
 
     public boolean canStepThroughCode() {
         // TODO     How do you move through your code one line at a time?
+        // f8
 
-        return false;
+        return true;
     }
 
     public boolean canSeeValueOfVariables() {
         // TODO     How do you see the value of a variable?
+        // hover over the variable while the program is paused at a breakpoint
 
-        return false;
+        return true;
     }
 
     public boolean canSeeValuesOfVariablesInStructures() {
 
         // TODO   What does clicking on the triangle next to a variable on the variables pane do?
+        // it expands complex variables like lists and arrays so one can see all values.
 
-        return false;
+        return true;
     }
 
 

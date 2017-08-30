@@ -25,7 +25,8 @@ import static input.InputUtils.doubleInput;
 
 public class Question_5_Average_Utility_Bill {
 
-    String[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+    String[] months = { "January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December" };
 
     public static void main(String[] args) {
 
@@ -48,31 +49,51 @@ public class Question_5_Average_Utility_Bill {
 
     public double[] getYearBills() {
 
-        // TODO ask user for bill amount for January, then February...
+        // ask user for bill amount for January, then February...
         // Store values in a double array. Return this array.
+        int i = 0;
+        double bills[] = new double[12];
+        while (i<months.length){
+            bills[i]= doubleInput("What was your bill for " + months[i]);
+            i++;
+        }
 
-        return null;  // replace with your code
+        return bills;  // replace with your code
 
     }
 
 
     public double averageBillAmount(double[] bills) {
 
-        // TODO Calculate the average value of all the bills, and return this number.
-        return 0;  // replace with your code
+        // Calculate the average value of all the bills, and return this number.
+        int i = 0;
+        double total = 0;
+        while (i<bills.length) {
+            total += bills[i];
+            i++;
+        }
+        /*System.out.println("DEBUG:Total: " + total + " count: "+bills.length+" average: "+ total/bills.length +
+                " REMOVE LINE 76 WHEN DONE!\n");*/
+
+        return total/bills.length;
     }
 
 
     public void printBillTable(double[] bills) {
 
-        // TODO display the month name, and bill amounts, in table form.
+        // display the month name, and bill amounts, in table form.
         // Use the months array to display the names.
 
 
         // Replace these lines with your code. You'll need to use a loop to display all the months.
         // String formatting is helpful. Here's some examples to space some columns with exactly 15 character width
         System.out.println(String.format("| %-15s| %-15s|", "Month", "Bill" ));
-        System.out.println(String.format("| %-15s| %-15.2f|", "January", 44.5995 ));
+        int i = 0;
+        while (i<months.length){
+            System.out.println(String.format("| %-15s| %-15.2f|", months[i], bills[i] ));
+            i++;
+        }
+
 
 
     }
