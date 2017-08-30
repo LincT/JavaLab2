@@ -57,15 +57,13 @@ public class Question_8_square_of_characters {
     public String getCharacter() {
 
         // ask user for character
-        String chr = stringInput("Type a character to repeat.");
+        String chr = "";
         // input validation - make sure user enters a string of length = 1.
-        if (chr.length()==1) {
-            return chr;
+        while (chr.length()!=1){
+            chr = stringInput("Type a character to repeat.");
         }
-        else{
-            System.out.println("invalid response. terminating.");
-            return null;
-        }
+        return chr;
+
 
         //return null;  // Replace with your code
 
@@ -76,13 +74,15 @@ public class Question_8_square_of_characters {
     public void printSquare(int size, String character) {
 
         // print a square of characters, of the given size.
+        String result = "";
 
         for (int x = 0;x<size;x++){
             for(int i = 0;i<size;i++) {
-                System.out.print(character);
+                result += (character);
             }
-            System.out.println();
+            result += "\n";
         }
+        System.out.println(result);
     }
 }
 
